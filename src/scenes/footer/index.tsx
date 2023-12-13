@@ -7,20 +7,19 @@ const Footer = () => {
             <div className='mt-16 basis-1/2 md:mt-0'>
                 <img src={logo} alt="logo" />
                 <p className='my-5'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, soluta!
+                    This is a DEMO website developed by Peter Chinoko
                 </p>
-                <p>© Evogym All rights Reserved.</p>
+                <p>© Evogym All rights Reserved. coded by Peter Chinoko</p>
             </div>
             <div className="mt-16 basis-1/4 md:mt-0">
                 <h4 className="font-bold">Links</h4>
-                <p className="my-5">peter chinoko is awesome</p>
-                <p className="my-5">peter chinoko is awesome</p>
-                <p>Hurray!</p>
+                <a href="https://peter-chinoko.vercel.app/">Peter's Portfolio</a>
+                <p className="my-5"><a href="https://github.com/Chinokoo">github</a></p>
+                <p></p>
             </div>
             <div className="mt-16 basis-1/4 md:mt-0">
-                <h4 className="font-bold">Contact Us</h4>
-                <p className="my-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, totam!</p>
-                <p>(333)435-6825</p>
+                <h4 className="font-bold my-5">Call Me</h4>
+                <p>+27 62 41 90 143</p>
             </div>
         </div>
 

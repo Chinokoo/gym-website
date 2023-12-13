@@ -1,4 +1,3 @@
-import {useState} from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import Logo from "@/assets/Logo.png";
 import Link from "./Link";
@@ -10,11 +9,13 @@ type  Props =  {
     isTopOfPage: boolean;
     selectedPage: SelectedPage;
     setSelectedPage: (value:SelectedPage) => void;
-}
+    isMenuToggled: boolean;
+    setIsMenuToggled: (isMenuToggle:boolean)=>void;
+} 
 
-const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}:Props) => {
+const Navbar = ({isTopOfPage,selectedPage,setSelectedPage,isMenuToggled,setIsMenuToggled}:Props) => {
     const flexBetween = "flex items-center justify-between" ;
-    const [isMenuToggled,setIsMenuToggled] = useState<boolean>(false)
+
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     const navbarBackground = isTopOfPage ? "":"bg-primary-100 drop-shadow";
   return <nav>
@@ -30,10 +31,10 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}:Props) => {
                 { isAboveMediumScreens ?(
                 <div className={`${flexBetween} w-full`}>
                     <div className={`${flexBetween} gap-8 text-sm`}>
-                        <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-                        <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)} />
+                        <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)}/>
+                        <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)}/>
+                        <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)}/>
                     </div>
                     <div className={`${flexBetween} gap-8`}>
                         <p>Sign In</p>
@@ -59,10 +60,10 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}:Props) => {
             </div>
             {/*Menu Items*/}
             <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-                        <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-                        <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)} />
+                        <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage}isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)}/>
+                        <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)} />
+                        <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} setIsMenuToggled={()=>setIsMenuToggled(!isMenuToggled)} />
                     </div>
         </div>
     )}

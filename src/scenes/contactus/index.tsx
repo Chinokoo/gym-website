@@ -37,7 +37,16 @@ const ContactUs = ({setSelectedPage}: Props) => {
 
               </HeaderText>  
               <p className="my-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo vero vel voluptas accusamus, dolores cum odio dicta sit, placeat rem quos facilis aliquam expedita laborum praesentium consectetur vitae. Cum, earum ab quos ratione maxime eaque aspernatur suscipit ducimus impedit minus aliquid. Omnis iste earum mollitia pariatur vitae natus nesciunt nemo nulla, asperiores suscipit aspernatur totam sequi nam? Itaque commodi nostrum repudiandae quis numquam. Aspernatur asperiores nisi quo voluptatem harum quibusdam.
+              Exercise is essential for maintaining good health and well-being. 
+              One of the best ways to exercise regularly is to join a EVOLVE GYM,
+               where you can access a variety of equipment, classes, and trainers.
+                Joining a gym can help you improve your fitness, strength, 
+                endurance, and flexibility. It can also boost your mood, energy,
+                 and confidence. Whether you want to lose weight, tone up, build muscle,
+                  or just have fun, there is a gym that suits your needs and preferences. 
+                  Joining a gym is an investment in yourself and your future. 
+                  So don't wait, sign up today and enjoy the benefits of a healthier and happier lifestyle.
+
               </p>
             </motion.div>
             {/*Form and Image*/}

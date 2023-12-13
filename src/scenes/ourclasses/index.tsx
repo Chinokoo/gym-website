@@ -68,10 +68,11 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           <div className="md:w-3/5">
             <HeaderText>OUR CLASSES</HeaderText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+            Gym classes are group workouts led by instructors. 
+            They offer fun, variety, and motivation. 
+            You can choose from different types of classes, such as yoga, spinning, aerobics, or boxing. 
+            Gym classes are suitable for all fitness levels and goals.
+
             </p>
           </div>
         </motion.div>
